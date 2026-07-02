@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
+import { ROUTES } from "@/constants";
 
 interface LogoProps {
   className?: string;
@@ -8,7 +9,10 @@ interface LogoProps {
 
 export function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn("flex items-center gap-3", className)}>
+    <Link
+      href={ROUTES.HOME}
+      className={cn("flex items-center gap-3", className)}
+    >
       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-lg font-bold text-primary-foreground shadow-md">
         A
       </div>

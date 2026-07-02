@@ -1,5 +1,3 @@
-import type { BaseEntity } from "./common";
-
 export type SubscriptionPlanType = "basic" | "professional" | "enterprise";
 
 export interface SubscriptionPricing {
@@ -40,7 +38,7 @@ export interface SubscriptionPlanFeatures {
   platformAdsEnabled: boolean;
 }
 
-export interface SubscriptionPlan extends BaseEntity {
+export interface SubscriptionPlan {
   code: SubscriptionPlanType;
 
   name: string;

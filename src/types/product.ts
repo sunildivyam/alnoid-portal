@@ -1,6 +1,3 @@
-import type { BaseEntity } from "./common";
-import type { SubscriptionPlan } from "./subscription";
-
 export interface ProductApiConfig {
   apiBaseUrl: string;
 
@@ -29,7 +26,7 @@ export interface ProductFeature {
   icon: string;
 }
 
-export interface Product extends BaseEntity {
+export interface Product {
   slug: string;
 
   name: string;
@@ -52,7 +49,7 @@ export interface Product extends BaseEntity {
 
   features: ProductFeature[];
 
-  subscriptionPlans: SubscriptionPlan[];
+  subscriptionPlans: string[];
 
   api: ProductApiConfig;
 

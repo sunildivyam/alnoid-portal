@@ -1,6 +1,4 @@
-import type { BaseEntity } from "./common";
-
-export interface Service extends BaseEntity {
+export interface Service {
   slug: string;
 
   title: string;
