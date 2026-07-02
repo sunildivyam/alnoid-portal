@@ -4,31 +4,31 @@ export const socialLinks: SocialLink[] = [
   {
     name: "LinkedIn",
     href: "https://linkedin.com/company/alnoid",
-    icon: "linkedin",
+    iconName: "linkedin",
   },
   {
     name: "GitHub",
     href: "https://github.com/alnoid",
-    icon: "github",
+    iconName: "github",
   },
   {
     name: "YouTube",
     href: "https://youtube.com/@alnoid",
-    icon: "youtube",
+    iconName: "youtube",
   },
   {
     name: "Facebook",
     href: "https://facebook.com/alnoid",
-    icon: "facebook",
+    iconName: "facebook",
   },
   {
     name: "Instagram",
     href: "https://instagram.com/alnoid",
-    icon: "instagram",
+    iconName: "instagram",
   },
   {
     name: "X",
     href: "https://x.com/alnoid",
-    icon: "twitter",
+    iconName: "twitter",
   },
 ];

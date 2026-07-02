@@ -4,13 +4,13 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-import { Container } from "./container";
 import { LanguageSwitcher } from "./language-switcher";
 import { Logo } from "./logo";
 import { MobileNavigation } from "./mobile-navigation";
 import { Navigation } from "./navigation";
 import { ThemeSwitcher } from "./theme-switcher";
 import { ROUTES } from "@/constants";
+import { Container } from "../layout/container";
 
 export function Header() {
   return (
