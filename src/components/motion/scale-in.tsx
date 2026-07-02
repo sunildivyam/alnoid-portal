@@ -1,5 +1,6 @@
 "use client";
 
+import { motionConfig } from "@/lib/motion-config";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
@@ -22,9 +23,9 @@ export function ScaleIn({ children, delay = 0, once = true }: ScaleInProps) {
       }}
       viewport={{ once }}
       transition={{
-        duration: 0.45,
+        duration: motionConfig.duration.normal,
         delay,
-        ease: "easeOut",
+        ease: motionConfig.ease,
       }}
     >
       {children}

@@ -1,5 +1,6 @@
 "use client";
 
+import { motionConfig } from "@/lib/motion-config";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
@@ -14,7 +15,7 @@ export interface SlideUpProps {
 export function SlideUp({
   children,
   delay = 0,
-  duration = 0.6,
+  duration = motionConfig.duration.normal,
   distance = 32,
   once = true,
 }: SlideUpProps) {
@@ -32,7 +33,7 @@ export function SlideUp({
       transition={{
         duration,
         delay,
-        ease: "easeOut",
+        ease: motionConfig.ease,
       }}
     >
       {children}

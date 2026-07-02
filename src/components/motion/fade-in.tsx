@@ -1,5 +1,6 @@
 "use client";
 
+import { motionConfig } from "@/lib/motion-config";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
@@ -13,8 +14,8 @@ export interface FadeInProps {
 export function FadeIn({
   children,
   delay = 0,
-  duration = 0.5,
-  once = true,
+  duration = motionConfig.duration.normal,
+  once = motionConfig.viewport.once,
 }: FadeInProps) {
   return (
     <motion.div
@@ -24,7 +25,7 @@ export function FadeIn({
       transition={{
         duration,
         delay,
-        ease: "easeOut",
+        ease: motionConfig.ease,
       }}
     >
       {children}

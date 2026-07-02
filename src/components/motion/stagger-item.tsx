@@ -1,5 +1,6 @@
 "use client";
 
+import { motionConfig } from "@/lib/motion-config";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
@@ -21,7 +22,7 @@ export function StaggerItem({ children }: StaggerItemProps) {
         },
       }}
       transition={{
-        duration: 0.45,
+        duration: motionConfig.duration.normal,
         ease: "easeOut",
       }}
     >

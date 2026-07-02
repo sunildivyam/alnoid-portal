@@ -1,5 +1,6 @@
 "use client";
 
+import { motionConfig } from "@/lib/motion-config";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
@@ -12,7 +13,7 @@ export interface StaggerContainerProps {
 
 export function StaggerContainer({
   children,
-  stagger = 0.08,
+  stagger = motionConfig.stagger,
   delayChildren = 0,
   once = true,
 }: StaggerContainerProps) {
