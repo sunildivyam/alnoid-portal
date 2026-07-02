@@ -1,23 +1,22 @@
 import Link from "next/link";
 
-import { Container } from "./container";
 import { Logo } from "./logo";
 
 import { legalNavigation, mainNavigation, socialLinks } from "@/config";
 import { ROUTES } from "@/constants";
-
 import {
   Facebook,
   Github,
   Instagram,
-  Linkedin,
+  // Linkedin,
   Mail,
   Twitter,
   Youtube,
-} from "lucide-react";
+} from "@/components/ui/simple-icons";
+import { Container } from "../layout/container";
 
 const socialIcons = {
-  linkedin: Linkedin,
+  // linkedin: Linkedin,
   github: Github,
   youtube: Youtube,
   facebook: Facebook,
@@ -87,7 +86,7 @@ export function Footer() {
                 socialIcons[item.iconName as keyof typeof socialIcons];
 
               if (!Icon) return null;
-
+              <p>Yes</p>;
               return (
                 <a
                   key={item.name}
