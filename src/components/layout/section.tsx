@@ -1,6 +1,7 @@
 import { HTMLAttributes } from "react";
 
 import { cn } from "@/lib/cn";
+import { spacing } from "@/lib/design-tokens";
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
@@ -19,9 +20,9 @@ export function Section({
       className={cn(
         "relative w-full",
         {
-          "py-12 lg:py-16": size === "sm",
-          "py-16 lg:py-24": size === "md",
-          "py-24 lg:py-32": size === "lg",
+          [spacing.sm]: size === "sm",
+          [spacing.md]: size === "md",
+          [spacing.lg]: size === "lg",
         },
         className,
       )}
