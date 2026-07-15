@@ -1,0 +1,766 @@
+You are an expert Staff Software Engineer, Frontend Architect, UI/UX Engineer, and Full-Stack Next.js developer.
+
+Your task is to generate a production-ready, enterprise-grade web application with clean architecture, scalability, maintainability, and extensibility.
+
+The application must follow modern engineering best practices, SOLID principles, clean code, reusable components, accessibility (WCAG), SEO optimization, responsive design, and performance optimization.
+
+Do not generate demo-quality code. Generate production-ready code.
+
+Technology Stack
+
+Use the following technologies:
+
+Next.js (Latest App Router)
+React (Latest)
+TypeScript
+Tailwind CSS
+shadcn/ui Component Library
+MongoDB
+Mongoose
+NextAuth
+React Hook Form
+Zod Validation
+Framer Motion
+next-intl (Internationalization)
+Lucide Icons
+next-themes
+Server Components where appropriate
+Route Handlers
+Server Actions where appropriate
+Architecture Requirements
+
+Design the project using modular architecture.
+
+Example:
+
+app/
+
+components/
+   layouts/
+   sections/
+   ui/
+   forms/
+   navigation/
+
+features/
+   auth/
+   profile/
+   pages/
+   cms/
+
+config/
+   pages/
+   templates/
+   navigation/
+   themes/
+
+lib/
+services/
+hooks/
+types/
+schemas/
+utils/
+styles/
+
+public/
+
+models/
+
+middleware.ts
+
+Every module should be isolated.
+
+Avoid duplicated code.
+
+Everything should be reusable.
+
+Core Design Philosophy
+
+Everything inside the application should be configuration driven.
+
+No page should contain hardcoded text.
+
+No page should contain hardcoded images.
+
+No page should contain hardcoded videos.
+
+No page should contain hardcoded buttons.
+
+No page should contain hardcoded cards.
+
+Instead,
+
+Store everything inside JSON configuration.
+
+Pages should simply render configuration.
+
+Example:
+
+Page
+    ↓
+Sections
+    ↓
+Components
+    ↓
+JSON Data
+Page Architecture
+
+Every page must be built using Sections.
+
+Example
+
+Home
+
+Hero Section
+
+Features Section
+
+CTA Section
+
+Testimonials
+
+Pricing
+
+FAQ
+
+Footer CTA
+
+Each section renders reusable UI Components.
+
+Example
+
+Hero
+
+Title
+
+Subtitle
+
+Buttons
+
+Image
+
+Video
+
+Badges
+
+Background
+
+All values must come from JSON.
+
+JSON Driven CMS
+
+Create JSON schema for pages.
+
+Example
+
+config/pages/home.json
+
+config/pages/about.json
+
+config/pages/contact.json
+
+Each page contains
+
+sections
+content
+images
+icons
+buttons
+videos
+layouts
+
+Changing JSON should change UI without modifying React code.
+
+Required Pages
+
+Generate complete pages for:
+
+Home
+About
+Contact
+Terms & Conditions
+Privacy Policy
+Register
+Login
+Forgot Password
+Reset Password
+User Profile Dashboard
+
+Support unlimited custom pages such as
+
+Products
+Services
+Pricing
+Careers
+FAQ
+Blogs
+Portfolio
+Team
+Documentation
+
+A developer should only need to create a JSON file to generate a new page.
+
+Main Layout
+
+Create reusable application layout.
+
+Header
+
+Contains
+
+Brand Logo
+Navigation
+Search (optional)
+Theme Switch
+Language Switch
+User Menu
+Login
+Logout
+Register
+Profile
+
+Main Content Area
+
+Footer
+
+Contains
+
+Links
+Social Icons
+Copyright
+Contact
+Newsletter
+Legal Links
+
+Layout must be reusable.
+
+UI Templates
+
+Create Template Engine.
+
+Each page should support multiple templates.
+
+Minimum:
+
+Template A
+
+Modern SaaS
+
+Template B
+
+Corporate
+
+Developer can select template inside JSON.
+
+Example
+
+{
+    "template": "modern"
+}
+
+or
+
+{
+    "template":"corporate"
+}
+
+Switching template should completely change layout while keeping same content.
+
+Templates should affect
+
+Hero
+Cards
+Pricing
+Testimonials
+CTA
+Footer
+Header
+Contact
+About
+Profile
+
+Template system should be scalable.
+
+Sections
+
+Create reusable sections.
+
+Examples
+
+Hero
+
+Feature Grid
+
+Cards
+
+Pricing
+
+FAQ
+
+Gallery
+
+Video
+
+Statistics
+
+Timeline
+
+Team
+
+Partners
+
+Testimonials
+
+Blog
+
+Contact Form
+
+Newsletter
+
+CTA
+
+Accordion
+
+Tabs
+
+Comparison
+
+Roadmap
+
+Features List
+
+Image Grid
+
+Logo Cloud
+
+Every section must accept JSON.
+
+Reusable UI Components
+
+Create reusable components.
+
+Examples
+
+Buttons
+
+Cards
+
+Input
+
+Textarea
+
+Select
+
+Checkbox
+
+Radio
+
+Avatar
+
+Badge
+
+Breadcrumb
+
+Pagination
+
+Alert
+
+Dialog
+
+Drawer
+
+Modal
+
+Table
+
+Chart placeholder
+
+Carousel
+
+Accordion
+
+Tabs
+
+Skeleton
+
+Tooltip
+
+Popover
+
+Toast
+
+Dropdown
+
+Navbar
+
+Sidebar
+
+Command Palette
+
+Empty State
+
+Loading State
+
+Error State
+
+Everything should follow shadcn/ui patterns.
+
+Theme System
+
+Support
+
+Light
+Dark
+System
+
+Using
+
+next-themes
+
+No hardcoded colors.
+
+Use CSS Variables.
+
+Create Design Tokens.
+
+Example
+
+--background
+
+--foreground
+
+--primary
+
+--secondary
+
+--accent
+
+--muted
+
+--card
+
+--border
+
+Tailwind should consume CSS Variables.
+
+Internationalization
+
+Use
+
+next-intl
+
+Support
+
+English
+
+Hindi
+
+Architecture should support unlimited languages.
+
+Translations stored in JSON.
+
+Authentication
+
+Use NextAuth.
+
+Support
+
+Email + Password
+
+Google OAuth
+
+Session Management
+
+JWT
+
+Refresh Session
+
+Protected Routes
+
+Role Based Access
+
+Roles
+
+Implement
+
+Free
+
+Basic
+
+Premium
+
+Admin
+
+Support Custom Roles
+
+Store roles inside database.
+
+Authorization middleware should check permissions.
+
+Authentication Features
+
+Register
+
+Login
+
+Logout
+
+Remember Me
+
+Forgot Password
+
+Reset Password
+
+Verify Email
+
+Protected Dashboard
+
+Profile Update
+
+Change Password
+
+Delete Account
+
+Google Login
+
+Email Login
+
+MongoDB
+
+Use MongoDB.
+
+Create Models.
+
+User
+
+Role
+
+Permission
+
+Session
+
+Page
+
+Template
+
+Media
+
+Settings
+
+Use Mongoose.
+
+User Dashboard
+
+Profile
+
+Account Settings
+
+Security
+
+Sessions
+
+Notifications
+
+Theme
+
+Language
+
+Subscription
+
+Role
+
+Activity Log
+
+Navigation
+
+Navigation should be configuration driven.
+
+Stored inside JSON.
+
+Support
+
+Nested menus
+
+Mega Menu
+
+Icons
+
+External Links
+
+Permissions
+
+Media Support
+
+Images
+
+Videos
+
+SVG
+
+Icons
+
+Background Images
+
+Background Videos
+
+Lazy Loading
+
+Responsive Images
+
+Forms
+
+Use
+
+React Hook Form
+
+Zod
+
+Reusable Form Components
+
+Validation
+
+Server Actions
+
+Error Handling
+
+Success Messages
+
+Loading States
+
+SEO
+
+Generate
+
+Metadata
+
+OpenGraph
+
+Twitter Cards
+
+Structured Data
+
+Sitemap
+
+Robots
+
+Canonical URLs
+
+Accessibility
+
+ARIA
+
+Keyboard Navigation
+
+Focus Management
+
+Semantic HTML
+
+Contrast Compliance
+
+Screen Reader Support
+
+Performance
+
+Image Optimization
+
+Code Splitting
+
+Dynamic Imports
+
+Lazy Loading
+
+Server Components
+
+Streaming
+
+Caching
+
+Prefetching
+
+Partial Hydration where appropriate
+
+Security
+
+CSRF Protection
+
+XSS Prevention
+
+Rate Limiting Ready
+
+Password Hashing
+
+Secure Cookies
+
+Input Validation
+
+Environment Variables
+
+State Management
+
+Prefer Server Components.
+
+Use React Context only where required.
+
+Avoid unnecessary global state.
+
+Error Handling
+
+404
+
+401
+
+403
+
+500
+
+Loading UI
+
+Empty State
+
+Retry State
+
+Offline State
+
+Logging
+
+Create logger utility.
+
+Support
+
+Info
+
+Warning
+
+Error
+
+Debug
+
+Folder Structure
+
+Design an enterprise folder structure.
+
+Everything should be feature-based.
+
+Avoid dumping files into components folder.
+
+Code Quality
+
+Use
+
+TypeScript strict mode
+
+ESLint
+
+Prettier
+
+Absolute Imports
+
+Reusable hooks
+
+Reusable utilities
+
+Strong typing
+
+No any type
+
+No duplicated logic

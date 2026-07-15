@@ -1,0 +1,40 @@
+Let's Create the marketing website (multi language, for now, English and Hindi) for our company Alnoid
+Home Page - Should have Who we are, product highlights, Why us, What we offer, Credentials, and similar, you can choose wisely.
+About
+products
+  - product (details, pricing)
+  - product (details, pricing)
+Services - Custom services, web Apps, Mobile Apps, Digital Twins, Hospitals, Manufacturing, Travel, Auto, etc. Should redirect to Contact page with selected service for more details.
+Pricing - Selectable Products as Cards, and on select, show its Subscription Plans
+Contact - Contact form should allow to choose single Product (as cards), below it contact fields, on submit send details to a POST API (api/contact), do not send it to DB, just to API as of now.
+Terms and conditions - Common terms and conditions, refund poilicy, Subscription policy, and similar
+Privacy
+Subscription Journey pages
+Sign In
+Sign Up
+Profile Dashboard - Show Selectable Subscribed Products / Plans. Later We will be creating Separate Dashboards and their features, status, usage, analytics, Payments, Users etc. Later will be using urls of these dashboards from their product apps, here.
+
+Currently the Products that Will be up are(All platforms will be multi tenant, multiuser):
+News Platform - Multitenant Wrold News apps
+Jobs Platform - World Jobs (multi tenant Naukri like platforms)
+Buy Sell Platform - multi tenant Olx like apps
+Ecommerce Platform -
+Volunteering Platform
+Custom Platforms - using AI, Digital Twins, Cloud, Web, Mobile, SASS, and latest technologies.
+
+How Subscription Journey should work:
+Home Page -> User selects a product -> chooses a Subscription Plan -> Review Subscription (plan & payment breakup) -> (If not signed, go to sign up/Sign In, and come back here) Payment Page (Razor Pay) -> Payment Successful -> Subscription Success Page -> Back to Dashboard.
+
+Choosing Subscription Plan from any of the pages, should directly take to review Subscription, then all next steps follows.
+
+Each product will have its own separate databese, users, tenants, and rest of the product specific data. APIs, backend, frontend, payment APIs, etc. That means In this app, User will signin/up using the selected product's apis, and database. Means it should be a product base user login.
+Tech Stack to use: Nextjs, tailwind, Shadecn/ui components lib, Animation Lib - Motion(Framer Motion), icons lib - Lucide React, images from https://cloudinary.com/
+Since it is a marketing Website, so use Animations as much as you can.
+Each Page should have a Header and Footer, Footer Should show Social media links too, in Addition to other information. Header should have main navigation.
+Whole application and its all components should be responsive for Mobile, tablets and Desktops. It Should support both Light and Dark themes.
+Site Language and theme (Dark/light) can be selected at the top of website.
+As its a Large project, so let's build it step by step. We are not creating any of the product web apps or any of its features, as a part of this scope. When needed we will use just their APIs (assumed Urls as of this scope, later actual urls)
+Use quality and professional content of all pages and components.
+Create Product details and their pricing plans (At least 3 subscription plans for each), create best and most efficient as per your wisdom.
+Store contents as json objects, to be displayed in UI components.
+So let's design and develop using the mentioned tech stack, step by step, page by page, component by component, flow by flow.

@@ -1,0 +1,28 @@
+{
+  "Common": {
+    "companyName": "Alnoid",
+    "companyTagline1": "AI Powered Platforms",
+    "companyTagline2": "AI Powered Multi-Tenant SaaS Platforms for Enterprises.",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "contact": "Contact",
+    "copyright": "Alnoid. All Rights Reserved."
+  },
+  "Navigation": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "refundPolicy": "Refund Policy",
+    "subscriptionPolicy": "Subscription Policy"
+  },
+  "Footer": {
+    "sectionCompany": "Company",
+    "sectionProducts": "Products",
+    "sectionLegal": "Legal"
+  }
+}
