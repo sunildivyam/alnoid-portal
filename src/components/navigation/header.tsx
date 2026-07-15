@@ -19,10 +19,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
       <Container>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between gap-3">
           <Logo />
 
-          <Navigation />
+          <div className="hidden flex-1 justify-center lg:flex">
+            <Navigation />
+          </div>
 
           <div className="hidden items-center gap-3 lg:flex">
             <LanguageSwitcher />
