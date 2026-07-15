@@ -1,47 +1,58 @@
+import { ROUTES } from "@/constants";
 import type { NavigationItem } from "@/types";
 
 export const mainNavigation: NavigationItem[] = [
   {
+    name: "home",
     title: "Home",
-    href: "/",
+    href: ROUTES.HOME,
   },
   {
+    name: "products",
     title: "Products",
-    href: "/products",
+    href: ROUTES.PRODUCTS,
   },
   {
+    name: "services",
     title: "Services",
-    href: "/services",
+    href: ROUTES.SERVICES,
   },
   {
+    name: "pricing",
     title: "Pricing",
-    href: "/pricing",
+    href: ROUTES.PRICING,
   },
   {
+    name: "about",
     title: "About",
-    href: "/about",
+    href: ROUTES.ABOUT,
   },
   {
+    name: "contact",
     title: "Contact",
-    href: "/contact",
+    href: ROUTES.CONTACT,
   },
 ];
 
 export const legalNavigation: NavigationItem[] = [
   {
+    name: "privacy",
     title: "Privacy",
-    href: "/privacy",
+    href: ROUTES.PRIVACY,
   },
   {
+    name: "terms",
     title: "Terms",
-    href: "/terms",
+    href: ROUTES.TERMS,
   },
   {
+    name: "refundPolicy",
     title: "Refund Policy",
-    href: "/refund-policy",
+    href: ROUTES.REFUND_POLICY,
   },
   {
+    name: "subscriptionPolicy",
     title: "Subscription Policy",
-    href: "/subscription-policy",
+    href: ROUTES.SUBSCRIPTION_POLICY,
   },
 ];

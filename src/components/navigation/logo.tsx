@@ -1,13 +1,16 @@
-import Link from "next/link";
+import { Link } from "@/i18n";
 
 import { cn } from "@/lib/cn";
 import { ROUTES } from "@/constants";
+import { useTranslations } from "next-intl";
 
 interface LogoProps {
   className?: string;
 }
 
 export function Logo({ className }: LogoProps) {
+  const t = useTranslations("Common");
+
   return (
     <Link
       href={ROUTES.HOME}
@@ -18,10 +21,12 @@ export function Logo({ className }: LogoProps) {
       </div>
 
       <div className="flex flex-col leading-none">
-        <span className="text-xl font-bold tracking-tight">Alnoid</span>
+        <span className="text-xl font-bold tracking-tight">
+          {t("companyName")}
+        </span>
 
         <span className="text-xs text-muted-foreground">
-          AI Powered Platforms
+          {t("companyTagline1")}
         </span>
       </div>
     </Link>

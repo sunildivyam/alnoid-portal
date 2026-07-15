@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/global.css";
 
 import { AppProvider } from "@/providers";
-import { MainLayout } from "@/components/layout/main-layout";
 
 export const metadata: Metadata = {
   title: "Alnoid",
@@ -18,7 +17,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <AppProvider>
-          <MainLayout>{children}</MainLayout>
+          <>{children}</>
         </AppProvider>
       </body>
     </html>

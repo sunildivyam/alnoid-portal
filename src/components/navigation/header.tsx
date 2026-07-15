@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n";
 
 import { Button } from "@/components/ui/button";
 
@@ -11,8 +11,11 @@ import { Navigation } from "./navigation";
 import { ThemeSwitcher } from "./theme-switcher";
 import { ROUTES } from "@/constants";
 import { Container } from "../layout/container";
+import { useTranslations } from "next-intl";
 
 export function Header() {
+  const t = useTranslations("Common");
+
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
       <Container>
@@ -27,11 +30,11 @@ export function Header() {
             <ThemeSwitcher />
 
             <Button variant="ghost" asChild>
-              <Link href={ROUTES.SIGN_IN}>Sign In</Link>
+              <Link href={ROUTES.SIGN_IN}>{t("signIn")}</Link>
             </Button>
 
             <Button asChild>
-              <Link href={ROUTES.PRODUCTS}>Get Started</Link>
+              <Link href={ROUTES.PRODUCTS}>{t("getStarted")}</Link>
             </Button>
           </div>
 

@@ -1,13 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n";
 
 import { mainNavigation } from "@/config";
 import { cn } from "@/lib/cn";
+import { useTranslations } from "next-intl";
 
 export function Navigation() {
   const pathname = usePathname();
+  const t = useTranslations("Navigation");
 
   return (
     <nav className="hidden items-center gap-8 lg:flex">
@@ -20,7 +21,7 @@ export function Navigation() {
             pathname === item.href ? "text-primary" : "text-muted-foreground",
           )}
         >
-          {item.title}
+          {t(item.name)}
         </Link>
       ))}
     </nav>

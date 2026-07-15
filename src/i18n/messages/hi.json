@@ -1,0 +1,28 @@
+{
+  "Common": {
+    "companyName": "Alnoid",
+    "companyTagline1": "एआई-संचालित प्लेटफॉर्म",
+    "companyTagline2": "उद्यमों के लिए एआई-संचालित मल्टी-टेनेंट SaaS प्लेटफॉर्म।",
+    "signIn": "साइन इन करें",
+    "getStarted": "शुरू करें",
+    "contact": "संपर्क करें",
+    "copyright": "Alnoid. सभी अधिकार सुरक्षित हैं।"
+  },
+  "Navigation": {
+    "home": "होम",
+    "products": "उत्पाद",
+    "services": "सेवाएँ",
+    "pricing": "मूल्य निर्धारण",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क करें",
+    "privacy": "गोपनीयता नीति",
+    "terms": "नियम एवं शर्तें",
+    "refundPolicy": "रिफंड नीति",
+    "subscriptionPolicy": "सब्स्क्रिप्शन नीति"
+  },
+  "Footer": {
+    "sectionCompany": "कंपनी",
+    "sectionProducts": "उत्पाद",
+    "sectionLegal": "कानूनी"
+  }
+}

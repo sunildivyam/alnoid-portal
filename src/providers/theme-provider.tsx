@@ -8,6 +8,11 @@ export interface ThemeProviderProps {
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
+  const scriptProps =
+    typeof window === "undefined"
+      ? undefined
+      : ({ type: "application/json" } as const);
+
   return (
     <NextThemesProvider
       attribute="class"
@@ -15,6 +20,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       enableSystem
       disableTransitionOnChange
       storageKey="alnoid-theme"
+      scriptProps={scriptProps}
     >
       {children}
     </NextThemesProvider>

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n";
 import { Menu } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -8,8 +8,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 import { mainNavigation } from "@/config";
+import { useTranslations } from "next-intl";
 
 export function MobileNavigation() {
+  const t = useTranslations("Navigation");
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -26,7 +29,7 @@ export function MobileNavigation() {
               href={item.href}
               className="text-lg font-medium"
             >
-              {item.title}
+              {t(item.name)}
             </Link>
           ))}
         </div>

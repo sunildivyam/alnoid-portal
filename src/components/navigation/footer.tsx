@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n";
 
 import { Logo } from "./logo";
 
@@ -14,6 +14,8 @@ import {
   Youtube,
 } from "@/components/ui/simple-icons";
 import { Container } from "../layout/container";
+import { useTranslations } from "next-intl";
+import { NavigationItem } from "@/types";
 
 const socialIcons = {
   // linkedin: Linkedin,
@@ -26,6 +28,10 @@ const socialIcons = {
 };
 
 export function Footer() {
+  const tN = useTranslations("Navigation");
+  const tC = useTranslations("Common");
+  const tF = useTranslations("Footer");
+
   return (
     <footer className="border-t bg-muted/30">
       <Container>
@@ -34,41 +40,54 @@ export function Footer() {
             <Logo />
 
             <p className="mt-5 text-sm leading-7 text-muted-foreground">
-              AI Powered Multi-Tenant SaaS Platforms for Enterprises.
+              {tC("companyTagline2")}
             </p>
           </div>
 
           <div>
-            <h3 className="mb-4 font-semibold">Company</h3>
+            <h3 className="mb-4 font-semibold">{tF("sectionCompany")}</h3>
 
             <div className="flex flex-col gap-3">
-              <Link href={ROUTES.ABOUT}>About</Link>
-              <Link href={ROUTES.CONTACT}>Contact</Link>
-              <Link href={ROUTES.SERVICES}>Services</Link>
+              {mainNavigation
+                .filter(
+                  (item) =>
+                    item.href === ROUTES.ABOUT ||
+                    item.href === ROUTES.CONTACT ||
+                    item.href === ROUTES.SERVICES,
+                )
+                .map((item) => {
+                  return (
+                    <Link key={item.name} href={item.href}>
+                      {tN(item.name)}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
 
           <div>
-            <h3 className="mb-4 font-semibold">Products</h3>
+            <h3 className="mb-4 font-semibold">{tF("sectionProducts")}</h3>
 
             <div className="flex flex-col gap-3">
               {mainNavigation
                 .filter((item) => item.href === ROUTES.PRODUCTS)
                 .map((item) => (
                   <Link key={item.href} href={item.href}>
-                    {item.title}
+                    {tN(item.name)}
                   </Link>
                 ))}
             </div>
           </div>
 
           <div>
-            <h3 className="mb-4 font-semibold">Legal</h3>
+            <h3 className="mb-4 font-semibold">
+              {tF("sectionLegal")}
+            </h3>
 
             <div className="flex flex-col gap-3">
               {legalNavigation.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  {item.title}
+                  {tN(item.name)}
                 </Link>
               ))}
             </div>
@@ -77,7 +96,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-6 border-t py-6 lg:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Alnoid. All Rights Reserved.
+            © {new Date().getFullYear()} {tC("copyright")}.
           </p>
 
           <div className="flex items-center gap-4">

@@ -1,0 +1,17 @@
+{
+  "heroSection": {
+    "tagline": "NEXT-GENERATION PRODUCT ENGINEERING",
+    "titleNormal": "Building Intelligent Digital Products for the ",
+    "titleHighlight": "Next Generation",
+    "description": "TechHavenLabs builds intelligent web, mobile, AI, and blockchain products that transform ideas and business processes into practical digital experiences.",
+    "primaryBtn": {
+      "text": "Start a Project",
+      "link": "#contact"
+    },
+    "secondaryBtn": {
+      "text": "Explore Our Capabilities",
+      "link": "#capabilities"
+    },
+    "bgImage": "https://techhavenlabs.com/assets/custom/background.png"
+  }
+}
