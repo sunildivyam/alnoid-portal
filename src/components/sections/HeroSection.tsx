@@ -39,7 +39,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
   };
 
   return (
-    <section className="relative min-h-[85vh] w-full flex items-center justify-start overflow-hidden bg-zinc-950 px-6 sm:px-12 md:px-20 lg:px-32">
+    <section className="relative min-h-[80vh] w-full flex items-center justify-start overflow-hidden bg-zinc-950 px-6 sm:px-12 md:px-20 lg:px-32 py-10">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
